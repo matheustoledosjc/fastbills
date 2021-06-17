@@ -1,12 +1,10 @@
 <?php
-echo '
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<meta charset="utf-8">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-		<title></title>
-	</head>
-	<body>
-';
+if (!isset($_SESSION)) session_start();
+
+if (!isset($_SESSION['user_id'])) {
+	session_destroy();
+	header("Location: http://127.0.0.1/fastbills/login.php"); exit;
+}
 ?>
+<?php include 'public_header.php'; ?>
+<?php include 'main_menu.php'; ?>
