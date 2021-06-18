@@ -1,4 +1,4 @@
-<?php include 'assets/public_header.php'; ?>
+<?php include '../assets/public_header.php'; ?>
 <div class="container">
 	<form action="create.php" method="POST">
 		<div class="mb-3">
@@ -21,4 +21,4 @@
 		<button type="submit" class="btn btn-primary">Salvar</button>
 	</form>
 </div>
-<?php include 'assets/footer.php'; ?>
+<?php include '../assets/footer.php'; ?>
