@@ -1,5 +1,6 @@
 <?php include 'assets/public_header.php'; ?>
-<div class="container">
+<div class="container yield_login">
+	<h2 class="text-center">Bem vindo ao FastBills</h2>
 	<form action="session/new.php" method="POST">
 		<div class="mb-3">
 			<label class="form-label">Login</label>
