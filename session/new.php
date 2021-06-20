@@ -8,7 +8,7 @@ if (!empty($_POST) AND (empty($_POST['login']) OR empty($_POST['password']))) {
 $login = $_POST['login'];
 $password = $_POST['password'];
 
-$sql = "SELECT u.id, u.name, a.id AS account_id, a.balance FROM users u, accounts a WHERE u.id = a.user_id AND (u.login = '".$login ."') AND (u.password = '".$password."') LIMIT 1";
+$sql = "SELECT u.id, u.name, u.admin, a.id AS account_id, a.balance FROM users u, accounts a WHERE u.id = a.user_id AND (u.login = '".$login ."') AND (u.password = '".$password."') LIMIT 1";
 $query = mysqli_query($strcon, $sql);
 if (mysqli_num_rows($query) != 1) {
     echo "Login inválido!"; exit;
@@ -19,8 +19,8 @@ if (mysqli_num_rows($query) != 1) {
 
 		$_SESSION['user_id'] = $result['id'];
         $_SESSION['user_name'] = $result['name'];
+        $_SESSION['user_admin'] = $result['admin'];
         $_SESSION['user_account_id'] = $result['account_id'];
-		$_SESSION['user_balance'] = $result['balance'];
 
     header("Location: http://127.0.0.1/fastbills/"); exit;
 }

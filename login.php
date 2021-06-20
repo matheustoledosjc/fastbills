@@ -11,6 +11,7 @@
 		</div>
 
 		<button type="submit" class="btn btn-primary">Entrar</button>
+		<button type="button" class="btn btn-primary" onclick="location.href = 'http://127.0.0.1/fastbills/users/new.php';">Criar conta</button>
 	</form>
 </div>
 <?php include 'assets/footer.php'; ?>
